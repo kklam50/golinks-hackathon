@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +44,83 @@
     transform: rotate(360deg);
   }
 }
+
+.card-row {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin: 20px 10rem 20px 10rem;
+}
+
+.card {
+  width: 350px;
+  position: relative;
+  background-color: #009889;
+  border: 1px solid rgb(255 255 255 / 5%);
+  border-radius: 1.5rem;
+  padding: 0.1rem;
+  color: white;
+}
+
+/* add ability to click on card */
+.card a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.card-title {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.card-description {
+  line-height: 1.5rem;
+  color:rgb(172, 172, 172)
+}
+
+.card-content {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    background-image: radial-gradient(
+      rgba(0, 0, 0, 0.219) 1px, 
+      transparent 1px
+    );
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    padding: 4rem;
+    border-radius: 1.25rem; 
+    overflow: hidden;
+}
+
+/* for mobile/small screens */
+@media (max-width: 600px) {
+  .card {
+    width: 350px;
+  }
+
+  .card-row {
+    margin: 20px auto;
+    grid-template-columns: repeat(auto-fit, auto-fit);
+  }
+
+  .card-content {
+    padding: 3rem;
+  }
+}
+
+.card-container {
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* input, label {
+  display: block;
+} */
