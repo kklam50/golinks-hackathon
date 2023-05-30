@@ -22,7 +22,7 @@ export default function SearchAPI() {
             <div className="search">
                 <form onSubmit={(showResults)}>
                     <h1>Search for Repo</h1>
-                    <input ref={repoOwner} type="text" id="repo-query" className="searchbar"></input><br></br>
+                    <input ref={repoOwner} type="text" id="repo-query" className="searchbar"></input><br/><br/>
                     <button type="submit" className="search-button">Search</button>
                 </form>
             </div>
